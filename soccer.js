@@ -18,7 +18,7 @@ var goalSound = new Audio();
 goalSound.src = "sounds/goal-sound.mp3";
 touch.src = "sounds/fly.mp3";
 touch.volume = 0.1;
-goalSound.volume = 0.1;
+goalSound.volume = 0.05;
 var i = 0;
 function draw() {
     loop();
