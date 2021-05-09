@@ -12,8 +12,6 @@ red.src = "images/red.png";
 blue.src = "images/blue.png";
 topResmi.src = "images/top.png";
 
-// audio files
-
 var touch = new Audio();
 var goalSound = new Audio();
 
@@ -28,24 +26,12 @@ function draw() {
     drawObject(redPlayer);
     drawObject(bluePlayer);
     drawObject(ball);
-    /*
-    ctx.drawImage(redPlayer.img, redPlayer.konumx - redPlayer.centerx, redPlayer.konumy - redPlayer.centery, redPlayer.cap*2, redPlayer.cap*2);
-    ctx.drawImage(bluePlayer.img, bluePlayer.konumx - bluePlayer.centerx, bluePlayer.konumy - bluePlayer.centery, 50, 50);
-    ctx.drawImage(ball.img, ball.konumx - ball.centerx, ball.konumy - ball.centery, 50, 50);*/
-    ctx.rotate(i);
-    //i+=0.00001;
     requestAnimationFrame(draw);
-    
 }
 
 function drawObject(nesne) {
     ctx.drawImage(nesne.img, nesne.konumx - nesne.centerx, nesne.konumy - nesne.centery, nesne.cap * 2, nesne.cap * 2);
     
-}
-
-var mouse = {
-    x: 0,
-    y: 0
 }
 
 var keys = {
@@ -246,14 +232,8 @@ function loop() {
     move(ball);
 
     gol(ball);
-    //yazilim.innerHTML = "hiz " + (Math.round (magnitude(redPlayer.hizx,redPlayer.hizy)*100) / 100);
 }
 draw();
-
-document.addEventListener('mousemove', (event) => {
-    mouse.x = event.clientX;
-    mouse.y = event.clientY;
-});
 
 document.addEventListener("keyup", event => {
     if (typeof keys[event.key] === 'undefined') return;
