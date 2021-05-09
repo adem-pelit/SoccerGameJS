@@ -184,7 +184,8 @@ function gol(nesne) {
         }
     }
 }
-robotMu = false;
+
+var robotMu = false;
 
 function loop() {
     var ivmeHizi = 0.1;
